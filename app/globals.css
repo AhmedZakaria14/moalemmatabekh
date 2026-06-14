@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-cairo), ui-sans-serif, system-ui, sans-serif;
+  --font-cairo: var(--font-cairo);
+}
+
+:root {
+  --background: 255 255 255;
+  --foreground: 10 10 10;
+}
+
+body {
+  background: white;
+  color: #1a1a1a;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}

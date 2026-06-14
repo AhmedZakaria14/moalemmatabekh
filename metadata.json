@@ -1,0 +1,6 @@
+{
+  "name": "معلم مطابخ جدة",
+  "description": "متخصصون في تركيب وصيانة المطابخ وتركيب الرخام في جدة بخبرة عملية وتشطيب احترافي.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
