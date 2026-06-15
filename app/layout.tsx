@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   description: 'أفضل معلم مطابخ بجدة متخصص في تصميم، تفصيل، تركيب، وصيانة المطابخ ومزج الخامات العصرية (خشب، ألمنيوم، صاج، كلادينج). تغيير أبواب الخزائن وتفصيل رخام المطابخ بدقة عالية. اتصل 0567659475.',
   keywords: ['معلم مطابخ', 'معلم مطابخ جدة', 'تفصيل مطابخ', 'تركيب مطابخ جدة', 'مطابخ خشب', 'مطابخ صاج', 'مطابخ المنيوم بجدة', 'مطابخ فرميكا', 'كلادينج مطابخ', 'مكس وتصميم مطابخ', 'صيانة مطابخ بجدة', 'تجديد مطابخ قديمة', 'فني تركيب مطابخ', 'تركيب رخام مطابخ'],
-  authors: [{ name: 'معلم مطابخ جدة', url: 'https://moalemmatabekh.com' }],
+  authors: [{ name: 'معلم مطابخ جدة', url: 'https://matabekhjeddah.com' }],
   creator: 'معلم مطابخ جدة',
   formatDetection: {
     telephone: true,
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'ar_SA',
-    url: 'https://moalemmatabekh.com',
+    url: 'https://matabekhjeddah.com',
     siteName: 'معلم مطابخ جدة',
     title: 'معلم مطابخ جدة | الأفضل في تفصيل وتركيب وصيانة المطابخ',
     description: 'الأفضل في تصميم، تفصيل، تركيب، وصيانة المطابخ وتركيب الرخام الصناعي والطبيعي في جدة وكافة أحيائها (الحمدانية، أبحر، الصفا، المروة). استشارة مجانية وسرعة في الإنجاز.',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     images: ['https://res.cloudinary.com/dxvjqrb9l/image/upload/v1781439759/%D9%85%D8%B9%D9%84%D9%85_%D9%85%D8%B7%D8%A7%D8%A8%D8%AE_sda9ba.png'],
   },
   alternates: {
-    canonical: 'https://moalemmatabekh.com',
+    canonical: 'https://matabekhjeddah.com',
   },
   robots: {
     index: true,
@@ -75,8 +75,8 @@ const jsonLd = {
   "@type": "HomeAndConstructionBusiness",
   "name": "معلم مطابخ جدة",
   "image": "https://res.cloudinary.com/dxvjqrb9l/image/upload/v1781439759/%D9%85%D8%B9%D9%84%D9%85_%D9%85%D8%B7%D8%A7%D8%A8%D8%AE_sda9ba.png",
-  "@id": "https://moalemmatabekh.com/#company",
-  "url": "https://moalemmatabekh.com",
+  "@id": "https://matabekhjeddah.com/#company",
+  "url": "https://matabekhjeddah.com",
   "telephone": "+966567659475",
   "priceRange": "$$",
   "address": {

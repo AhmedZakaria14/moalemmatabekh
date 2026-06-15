@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://moalemmatabekh.com/sitemap.xml',
+    sitemap: 'https://matabekhjeddah.com/sitemap.xml',
   }
 }
