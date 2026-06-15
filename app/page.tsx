@@ -29,6 +29,21 @@ export default function MoalemMatabekh() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [scrolled, setScrolled] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    service: 'تفصيل مطبخ (خشب، المنيوم، مكس)',
+    message: ''
+  });
+
+  const handleWhatsAppSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const text = `السلام عليكم ورحمة الله وبركاته،\n\n*الاسم:* ${formData.name}\n*رقم الجوال:* ${formData.phone}\n*الخدمة المطلوبة:* ${formData.service}\n*التفاصيل:* ${formData.message}`;
+    const encodedText = encodeURIComponent(text);
+    window.open(`https://wa.me/966567659475?text=${encodedText}`, '_blank');
+  };
+
   
   const { scrollY } = useScroll();
   const parallaxY = useTransform(scrollY, [0, 1000], [0, 200]);
@@ -54,18 +69,18 @@ export default function MoalemMatabekh() {
 
   const heroSlides = [
     {
-      title: "تركيب مطابخ حديثة بتشطيب احترافي في جدة",
-      description: "معلم مطابخ – دقة التنفيذ، جمال التفاصيل",
+      title: "تفصيل وتركيب مطابخ حديثة بتشطيب احترافي في جدة",
+      description: "معلم مطابخ جدة – دقة التنفيذ، جمال التفاصيل",
       image: "https://res.cloudinary.com/dxvjqrb9l/image/upload/w_1600,q_auto,f_auto/v1781396929/hero-bg1.jpg_s0urew.jpg"
     },
     {
-      title: "صيانة مطابخ تعيد لمطبخك كفاءته وأناقتـه",
-      description: "خبرة – التزام – جودة",
+      title: "صيانة وتجديد مطابخ تعيد لمطبخك كفاءته وأناقتـه",
+      description: "فني صيانة مطابخ بجدة – استبدال مفصلات وأدراج",
       image: "https://res.cloudinary.com/dxvjqrb9l/image/upload/w_1600,q_auto,f_auto/v1781396928/blog1_w5gduo.jpg"
     },
     {
-      title: "تركيب رخام مطابخ بأعلى دقة ولمسة فنية",
-      description: "معلم مطابخ في جدة",
+      title: "تركيب رخام مطابخ صناعي وطبيعي بأعلى دقة",
+      description: "أفضل معلم تركيب رخام مطابخ في جميع أحياء جدة",
       image: "https://res.cloudinary.com/dxvjqrb9l/image/upload/w_1600,q_auto,f_auto/v1781396928/blog2_jbgmew.jpg"
     }
   ];
@@ -80,29 +95,29 @@ export default function MoalemMatabekh() {
   const services = [
     {
       id: 1,
-      title: 'تركيب مطابخ',
-      description: 'نقدم حلول متكاملة في تركيب المطابخ بجميع أنواعها، من التصميم وحتى التنفيذ النهائي، باستخدام خامات عالية الجودة وتشطيب يليق بذوقك الرفيع.',
+      title: 'تفصيل وتركيب مطابخ',
+      description: 'نقدم حلول متكاملة في تركيب جميع قطاعات المطابخ: الألمنيوم، الخشب، الصاج، والكلادينج (ومكس الخامات)، من التصميم وحتى التنفيذ النهائي.',
       icon: <Hammer className="w-7 h-7" />,
       image: 'https://res.cloudinary.com/dxvjqrb9l/image/upload/w_800,q_auto,f_auto/v1781396928/D8_AA_D8_B1_D9_83_D9_8A_D8_A8-_D9_85_D8_B7_D8_A7_D8_A8_D8_AE.jpg_xi9q5l.jpg'
     },
     {
       id: 2,
-      title: 'صيانة مطابخ',
-      description: 'خدمات صيانة مطابخ شاملة تشمل المفصلات، الأدراج، الأبواب، والخزائن، لإعادة المطبخ إلى حالته المثالية بدون الحاجة لتغييره بالكامل.',
+      title: 'تجديد وصيانة شاملة',
+      description: 'خدمات صيانة شاملة للمطابخ وتجديدها بالكامل لتبدو كأنها جديدة؛ استبدال المفصلات، أدراج السحب، الأبواب، ومسكات الخزائن بحرفية عالية.',
       icon: <Wrench className="w-7 h-7" />,
       image: 'https://res.cloudinary.com/dxvjqrb9l/image/upload/w_800,q_auto,f_auto/v1781396928/D8_B5_D9_8A_D8_A7_D9_86_D8_A9-_D9_85_D8_B7_D8_A7_D8_A8_D8_AE.png_d9o8oc.jpg'
     },
     {
       id: 3,
-      title: 'تركيب رخام مطابخ',
-      description: 'نُتقن تركيب جميع أنواع الرخام الطبيعي والصناعي بأسلوب احترافي يضمن المتانة والجمال وسهولة الاستخدام، مع قص وتركيب دقيق.',
+      title: 'تفصيل رخام مطابخ',
+      description: 'نُتقن تركيب جميع أنواع الرخام الصناعي والطبيعي بأسلوب احترافي يضمن المتانة والجمال وسهولة الاستخدام، مع قص وتركيب دقيق ومطابق للمقاسات.',
       icon: <Gem className="w-7 h-7" />,
       image: 'https://res.cloudinary.com/dxvjqrb9l/image/upload/w_800,q_auto,f_auto/v1781396927/D8_AA_D8_B1_D9_83_D9_8A_D8_A8-_D8_B1_D8_AE_D8_A7_D9_85_myoltn.jpg'
     },
     {
       id: 4,
-      title: 'تشطيبات مطابخ',
-      description: 'تشطيبات مطابخ تجمع بين الجمال والعملية، نهتم بأدق التفاصيل واللمسات النهائية التي تضفي لمسة فنية فريدة لمطبخك ليعيش طويلاً.',
+      title: 'إكسسوارات وتشطيبات',
+      description: 'تشطيبات مطابخ حديثة تجمع بين الجمال والعملية، نهتم بتركيب الإكسسوارات العصرية والسلال المخفية واللمسات النهائية التي تضفي حيوية وسهولة.',
       icon: <Layers className="w-7 h-7" />,
       image: 'https://res.cloudinary.com/dxvjqrb9l/image/upload/w_800,q_auto,f_auto/v1781396928/blog3_yscypf.jpg'
     }
@@ -679,12 +694,15 @@ export default function MoalemMatabekh() {
                 <p className="text-stone-500 text-sm">املأ النموذج وسنقوم بالتواصل معك في أقرب وقت لإرسال فني لمعاينة الموقع.</p>
               </div>
 
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleWhatsAppSubmit}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-stone-900 font-bold text-sm">الاسم</label>
                     <input 
                       type="text" 
+                      required
+                      value={formData.name}
+                      onChange={(e) => setFormData({...formData, name: e.target.value})}
                       className="w-full bg-stone-50/50 border border-stone-200 px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500/50 focus:border-amber-500 transition-all text-stone-900" 
                       placeholder="الاسم الكريم" 
                     />
@@ -693,6 +711,9 @@ export default function MoalemMatabekh() {
                     <label className="text-stone-900 font-bold text-sm">رقم الجوال</label>
                     <input 
                       type="tel" 
+                      required
+                      value={formData.phone}
+                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
                       className="w-full bg-stone-50/50 border border-stone-200 px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500/50 focus:border-amber-500 transition-all text-stone-900" 
                       placeholder="05xxxxxxxx" 
                     />
@@ -702,11 +723,16 @@ export default function MoalemMatabekh() {
                 <div className="space-y-2">
                   <label className="text-stone-900 font-bold text-sm">الخدمة المطلوبة</label>
                   <div className="relative">
-                    <select className="w-full bg-stone-50/50 border border-stone-200 px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500/50 focus:border-amber-500 transition-all text-stone-900 appearance-none font-medium">
-                      <option>تركيب مطبخ جديد</option>
-                      <option>صيانة مطبخ قائم</option>
-                      <option>تركيب رخام</option>
-                      <option>تشطيبات عامة</option>
+                    <select 
+                      value={formData.service}
+                      onChange={(e) => setFormData({...formData, service: e.target.value})}
+                      className="w-full bg-stone-50/50 border border-stone-200 px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500/50 focus:border-amber-500 transition-all text-stone-900 appearance-none font-medium"
+                    >
+                      <option value="تفصيل مطبخ (خشب، المنيوم، مكس)">تفصيل مطبخ (خشب، المنيوم، مكس)</option>
+                      <option value="تركيب مطبخ جديد أو جاهز">تركيب مطبخ جديد أو جاهز</option>
+                      <option value="صيانة وتجديد مطبخ قائم">صيانة وتجديد مطبخ قائم</option>
+                      <option value="تفصيل وتركيب رخام">تفصيل وتركيب رخام</option>
+                      <option value="تشطيبات عامة (ابواب، مفصلات)">تشطيبات عامة (ابواب، مفصلات)</option>
                     </select>
                     <ArrowLeft className="w-5 h-5 absolute left-5 top-1/2 -translate-y-1/2 text-stone-400 rotate-[-90deg] pointer-events-none" />
                   </div>
@@ -716,13 +742,15 @@ export default function MoalemMatabekh() {
                   <label className="text-stone-900 font-bold text-sm">التفاصيل</label>
                   <textarea 
                     rows={4} 
+                    value={formData.message}
+                    onChange={(e) => setFormData({...formData, message: e.target.value})}
                     className="w-full bg-stone-50/50 border border-stone-200 px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500/50 focus:border-amber-500 transition-all text-stone-900 resize-none" 
                     placeholder="حدثنا عن احتياجك أو متطلباتك..."
                   ></textarea>
                 </div>
                 
                 <button 
-                  type="button" 
+                  type="submit" 
                   className="w-full bg-stone-900 hover:bg-amber-600 text-white font-bold py-4 rounded-xl transition-colors duration-300 flex justify-center items-center gap-2"
                 >
                   إرسال الطلب
@@ -730,6 +758,26 @@ export default function MoalemMatabekh() {
               </form>
             </div>
             
+          </div>
+        </div>
+      </section>
+
+      {/* Local SEO Section */}
+      <section className="py-12 bg-stone-100 border-t border-stone-200 text-stone-600">
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-xl font-bold mb-4 text-stone-800">أفضل معلم مطابخ بجدة لتفصيل وتركيب وصيانة جميع أنواع المطابخ</h2>
+            <p className="text-sm leading-relaxed mb-4">
+              نحن نقدم خدمات <a href="#services" className="font-semibold text-amber-600 hover:underline">تفصيل وتركيب مطابخ بجدة</a> بأعلى معايير الجودة. نتميز بالجمع والمزج بين أجود الخامات العصرية: <strong>مطابخ الألمنيوم، ومطابخ الصاج، ومطابخ الخشب، والكلادينج، والفرميكا</strong>. سواء كنت تبحث عن <strong>فني مطابخ بجدة</strong> لتصميم مطبخ أحلامك، أو <strong>معلم صيانة وتجديد مطابخ</strong> وتفصيل أسطح الرخام (الصناعي والطبيعي)، فنحن نوفر لك أفضل الكفاءات بأرخص الأسعار في جميع أحياء جدة (الحمدانية، أبحر، الصفا، المروة).
+            </p>
+            <p className="text-sm leading-relaxed flex flex-wrap justify-center gap-2 text-stone-500">
+              <span>#معلم_مطابخ_جدة</span>
+              <span>#مطابخ_المنيوم_وصاج</span>
+              <span>#تفصيل_مطابخ_خشب</span>
+              <span>#تركيب_وصيانة_مطابخ</span>
+              <span>#تجديد_المطابخ_القديمة</span>
+              <span>#رخام_مطابخ_صناعي</span>
+            </p>
           </div>
         </div>
       </section>
@@ -803,24 +851,45 @@ export default function MoalemMatabekh() {
         
         <div className="container mx-auto px-6 md:px-12 pt-8 border-t border-stone-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium tracking-wide text-stone-500">
           <p>جميع الحقوق محفوظة © {new Date().getFullYear()} معلم مطابخ</p>
-          <p className="flex items-center gap-1">تم التصميم بكل <span className="text-amber-600">❤</span> في السعودية</p>
+          <p className="flex items-center gap-1">
+            تم التصميم والتطوير بواسطة: 
+            <a href="https://nasharhub.com" target="_blank" rel="noopener noreferrer" className="text-amber-500 hover:text-amber-400 transition-colors font-bold mx-1">
+              Nasharhub.com
+            </a>
+          </p>
         </div>
       </footer>
 
-      {/* WhatsApp Floating Action Button */}
-      <motion.a
-        href="https://wa.me/966567659475"
-        target="_blank"
-        rel="noopener noreferrer"
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[100] bg-[#25D366] text-white p-4 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.2)] flex items-center justify-center hover:bg-[#20bd5a] transition-colors"
-        aria-label="تواصل معنا عبر واتساب"
-      >
-        <MessageCircle className="w-7 h-7" />
-      </motion.a>
+      {/* Floating Action Buttons */}
+      <div className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[100] flex flex-col gap-3">
+        {/* Phone Floating Action Button */}
+        <motion.a
+          href="tel:0567659475"
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="bg-amber-500 text-white p-4 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.2)] flex items-center justify-center hover:bg-amber-600 transition-colors"
+          aria-label="اتصل بنا"
+        >
+          <Phone className="w-7 h-7" />
+        </motion.a>
+
+        {/* WhatsApp Floating Action Button */}
+        <motion.a
+          href="https://wa.me/966567659475"
+          target="_blank"
+          rel="noopener noreferrer"
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="bg-[#25D366] text-white p-4 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.2)] flex items-center justify-center hover:bg-[#20bd5a] transition-colors"
+          aria-label="تواصل معنا عبر واتساب"
+        >
+          <MessageCircle className="w-7 h-7" />
+        </motion.a>
+      </div>
     </div>
   );
 }
