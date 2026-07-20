@@ -190,6 +190,7 @@ export default function MoalemMatabekh() {
               <a href="#about" className="hover:text-amber-500 transition-colors">عن الشركة</a>
               <a href="#services" className="hover:text-amber-500 transition-colors">الخدمات</a>
               <a href="#gallery" className="hover:text-amber-500 transition-colors">معرض الأعمال</a>
+              <Link href="/blog" className="hover:text-amber-500 transition-colors">المدونة</Link>
               <a href="#method" className="hover:text-amber-500 transition-colors">آلية العمل</a>
               <a href="#contact" className="hover:text-amber-500 transition-colors">تواصل معنا</a>
             </div>
@@ -198,7 +199,7 @@ export default function MoalemMatabekh() {
           <div className="hidden lg:flex items-center gap-4">
             <div className={`flex flex-col items-end mr-4 border-r ${scrolled ? 'border-stone-200 text-stone-800' : 'border-white/20 text-white'} pr-4`}>
               <span className={`text-[10px] tracking-widest uppercase mb-0.5 ${scrolled ? 'text-stone-400' : 'text-stone-300'}`}>اتصل بنا</span>
-              <a href="tel:0511560550" className="font-bold tracking-tighter hover:text-amber-500 transition-colors" style={{ direction: 'ltr' }}>0511560550</a>
+              <a href="tel:0567659475" className="font-bold tracking-tighter hover:text-amber-500 transition-colors" style={{ direction: 'ltr' }}>056 765 9475</a>
             </div>
             <a 
               href="#contact"
@@ -230,12 +231,13 @@ export default function MoalemMatabekh() {
                 <a href="#about" onClick={() => setIsMenuOpen(false)}>عن الشركة</a>
                 <a href="#services" onClick={() => setIsMenuOpen(false)}>الخدمات</a>
                 <a href="#gallery" onClick={() => setIsMenuOpen(false)}>معرض الأعمال</a>
+                <Link href="/blog" onClick={() => setIsMenuOpen(false)}>المدونة</Link>
                 <a href="#method" onClick={() => setIsMenuOpen(false)}>كيف نعمل</a>
                 <a href="#contact" onClick={() => setIsMenuOpen(false)}>اتصل بنا</a>
                 
                 <div className="h-px bg-stone-100 my-4 w-12"></div>
                 
-                <a href="tel:0511560550" className="text-xl text-amber-600 font-bold" style={{ direction: 'ltr', textAlign: 'right' }}>051 156 0550</a>
+                <a href="tel:0567659475" className="text-xl text-amber-600 font-bold" style={{ direction: 'ltr', textAlign: 'right' }}>056 765 9475</a>
               </div>
             </motion.div>
           )}
@@ -654,13 +656,13 @@ export default function MoalemMatabekh() {
                 </p>
                 
                 <div className="space-y-8">
-                  <a href="tel:0511560550" className="flex items-start gap-5 group">
+                  <a href="tel:0567659475" className="flex items-start gap-5 group">
                     <div className="w-12 h-12 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center text-amber-500 shrink-0 group-hover:bg-amber-600 group-hover:text-white transition-colors">
                       <Phone className="w-5 h-5" />
                     </div>
                     <div>
                       <p className="text-stone-500 text-[11px] font-bold uppercase tracking-wider mb-1">الهاتف</p>
-                      <p className="text-xl font-bold tracking-tight" style={{ direction: 'ltr' }}>051 156 0550</p>
+                      <p className="text-xl font-bold tracking-tight" style={{ direction: 'ltr' }}>056 765 9475</p>
                     </div>
                   </a>
                   
@@ -815,6 +817,7 @@ export default function MoalemMatabekh() {
                 <li><a href="#hero" className="hover:text-amber-500 transition-colors">الرئيسية</a></li>
                 <li><a href="#about" className="hover:text-amber-500 transition-colors">عن الشركة</a></li>
                 <li><a href="#services" className="hover:text-amber-500 transition-colors">الخدمات</a></li>
+                <li><Link href="/blog" className="hover:text-amber-500 transition-colors">المدونة</Link></li>
                 <li><a href="#method" className="hover:text-amber-500 transition-colors">آلية العمل</a></li>
               </ul>
             </div>
@@ -834,7 +837,7 @@ export default function MoalemMatabekh() {
               <ul className="space-y-4 text-sm">
                 <li className="flex items-start gap-3 justify-end group">
                   <div className="pt-0.5">
-                    <p className="font-bold text-stone-200" style={{ direction: 'ltr' }}>0511560550</p>
+                    <p className="font-bold text-stone-200" style={{ direction: 'ltr' }}>056 765 9475</p>
                   </div>
                   <Phone className="w-4 h-4 text-amber-500 mt-1" />
                 </li>
