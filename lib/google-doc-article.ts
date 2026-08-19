@@ -3,12 +3,14 @@ import kitchenInstallation from '@/content/blog/kitchen-installation-jeddah';
 import ikeaInstallation from '@/content/blog/ikea-kitchen-installation-jeddah';
 import woodInstallation from '@/content/blog/wood-kitchen-installation-jeddah';
 import countertopInstallation from '@/content/blog/kitchen-countertop-installation-jeddah';
+import kitchenMaintenance from '@/content/blog/kitchen-maintenance-jeddah';
 
 const markdownBySlug: Record<string, string> = {
   'kitchen-installation-jeddah': kitchenInstallation,
   'ikea-kitchen-installation-jeddah': ikeaInstallation,
   'wood-kitchen-installation-jeddah': woodInstallation,
   'kitchen-countertop-installation-jeddah': countertopInstallation,
+  'kitchen-maintenance-jeddah': kitchenMaintenance,
 };
 
 const escapeHtml = (value: string) => value
@@ -65,7 +67,7 @@ export async function loadGoogleDocArticle(article: SeoArticle) {
   }
 
   const related = seoArticles.filter((item) => item.slug !== article.slug);
-  html.push(`<section class="my-12 rounded-2xl border border-amber-200 bg-amber-50 p-6"><h2 class="text-2xl font-bold text-stone-900 mb-4">مقالات مرتبطة قد تهمك</h2><p class="text-stone-700 mb-4">للتوسع في موضوع تركيب المطابخ، يمكنك الاطلاع على هذه الأدلة المرتبطة:</p><ul class="space-y-3">${related.map((item) => `<li><a href="/blog/${item.slug}" target="_blank" rel="noopener noreferrer" class="text-amber-700 font-bold hover:underline">${item.title}</a></li>`).join('')}</ul></section>`);
+  html.push(`<section class="my-12 rounded-2xl border border-amber-200 bg-amber-50 p-6"><h2 class="text-2xl font-bold text-stone-900 mb-4">مقالات مرتبطة قد تهمك</h2><p class="text-stone-700 mb-4">يمكنك الاطلاع على هذه الأدلة المرتبطة بخدمات المطابخ في جدة:</p><ul class="space-y-3">${related.map((item) => `<li><a href="/blog/${item.slug}" target="_blank" rel="noopener noreferrer" class="text-amber-700 font-bold hover:underline">${item.title}</a></li>`).join('')}</ul></section>`);
 
   return { content: `<div class="prose prose-stone prose-lg max-w-none text-stone-700">${html.join('')}</div>`, tableOfContents };
 }
