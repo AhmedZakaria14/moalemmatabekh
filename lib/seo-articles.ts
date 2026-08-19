@@ -58,6 +58,17 @@ export const seoArticles: SeoArticle[] = [
     tags: ['تركيب اسطح مطابخ', 'جدة', 'فني تركيب رخام مطابخ'],
     keywords: ['تركيب اسطح مطابخ', 'فني تركيب رخام مطابخ', 'تركيب رخام مطابخ', 'تركيب سطح مطبخ', 'تركيب اسطح مطابخ جدة'],
   },
+  {
+    slug: 'kitchen-maintenance-jeddah',
+    docId: '1L80b9tLWq0ATh-LxRk2rormDJz_8P5yEwHp94WPscj8',
+    title: 'صيانة مطابخ وإصلاح الأعطال التي تؤثر في استخدامها',
+    seoTitle: 'صيانة مطابخ بجدة | فني صيانة مطابخ وإصلاح الأعطال',
+    excerpt: 'دليل صيانة مطابخ بجدة وإصلاح أعطال الأبواب والمفصلات والأدراج وتلف الخزائن بسبب المياه، مع نصائح لاختيار فني صيانة مطابخ مناسب.',
+    coverImage: '/blog/kitchen-maintenance-jeddah.svg',
+    date: '2026-08-19', updated: '2026-08-19', author: 'معلم مطابخ جدة', readTime: '16 دقيقة',
+    tags: ['صيانة مطابخ', 'جدة', 'فني صيانة مطابخ'],
+    keywords: ['صيانة مطابخ', 'فني صيانة مطابخ', 'صيانة مطابخ جدة', 'فني صيانة مطابخ جدة'],
+  },
 ];
 
 export const getSeoArticle = (slug: string) => seoArticles.find((article) => article.slug === slug);
