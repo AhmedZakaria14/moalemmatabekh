@@ -10,7 +10,7 @@ export default function SiteFooter() {
           <div className="lg:col-span-1 border-b border-stone-800 pb-8 lg:border-0 lg:pb-0">
             <Link href="/" className="mb-6 inline-block">
               <Image
-                src="https://res.cloudinary.com/dxvjqrb9l/image/upload/v1781439759/%D9%85%D8%B9%D9%84%D9%85_%D9%85%D8%B7%D8%A7%D8%A8%D8%AE_sda9ba.png"
+                src="/moalem-matabekh-logo.svg"
                 alt="معلم مطابخ جدة"
                 width={150}
                 height={50}
