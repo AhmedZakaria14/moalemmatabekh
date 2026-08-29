@@ -18,7 +18,7 @@ export default function BlogListingPage() {
   return (
     <div className="min-h-screen bg-stone-50" dir="rtl">
       <section className="relative pt-32 pb-20 bg-stone-900 text-white overflow-hidden">
-        <div className="absolute inset-0 z-0"><div className="absolute inset-0 bg-stone-900/90 mix-blend-multiply z-10" /><Image src="https://res.cloudinary.com/dxvjqrb9l/image/upload/w_1600,q_auto,f_auto/v1781396929/hero-bg1.jpg_s0urew.jpg" alt="خلفية مدونة معلم مطابخ جدة" fill className="object-cover" referrerPolicy="no-referrer" priority /></div>
+        <div className="absolute inset-0 z-0"><div className="absolute inset-0 bg-stone-900/90 mix-blend-multiply z-10" /><Image src="/blog/kitchen-installation-jeddah.svg" alt="خلفية مدونة معلم مطابخ جدة" fill className="object-cover" referrerPolicy="no-referrer" priority /></div>
         <div className="container relative z-20 mx-auto px-6 md:px-12 text-center"><h1 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">مدونة <span className="text-amber-500">معلم مطابخ جدة</span></h1><p className="text-lg text-stone-300 max-w-2xl mx-auto leading-relaxed">دليلك الشامل لكل ما يخص تفصيل وتركيب وصيانة المطابخ، مع نصائح عملية لمطبخ متين وعملي.</p></div>
       </section>
       <section className="py-20"><div className="container mx-auto px-6 md:px-12"><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
