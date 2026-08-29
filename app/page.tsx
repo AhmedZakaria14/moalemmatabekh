@@ -71,17 +71,17 @@ export default function MoalemMatabekh() {
     {
       title: "تفصيل وتركيب مطابخ حديثة بتشطيب احترافي في جدة",
       description: "معلم مطابخ جدة – دقة التنفيذ، جمال التفاصيل",
-      image: "/blog/kitchen-installation-jeddah.svg"
+      image: "/site/hero-1.svg"
     },
     {
       title: "صيانة وتجديد مطابخ تعيد لمطبخك كفاءته وأناقتـه",
       description: "فني صيانة مطابخ بجدة – استبدال مفصلات وأدراج",
-      image: "/blog/kitchen-maintenance-jeddah.svg"
+      image: "/site/hero-2.svg"
     },
     {
       title: "تركيب رخام مطابخ صناعي وطبيعي بأعلى دقة",
       description: "أفضل معلم تركيب رخام مطابخ في جميع أحياء جدة",
-      image: "/blog/kitchen-countertop-installation-jeddah.svg"
+      image: "/site/hero-3.svg"
     }
   ];
 
@@ -98,28 +98,28 @@ export default function MoalemMatabekh() {
       title: 'تفصيل وتركيب مطابخ',
       description: 'نقدم حلول متكاملة في تركيب جميع قطاعات المطابخ: الألمنيوم، الخشب، الصاج، والكلادينج (ومكس الخامات)، من التصميم وحتى التنفيذ النهائي.',
       icon: <Hammer className="w-7 h-7" />,
-      image: '/blog/kitchen-installation-jeddah.svg'
+      image: '/site/service-installation.svg'
     },
     {
       id: 2,
       title: 'تجديد وصيانة شاملة',
       description: 'خدمات صيانة شاملة للمطابخ وتجديدها بالكامل لتبدو كأنها جديدة؛ استبدال المفصلات، أدراج السحب، الأبواب، ومسكات الخزائن بحرفية عالية.',
       icon: <Wrench className="w-7 h-7" />,
-      image: '/blog/kitchen-maintenance-jeddah.svg'
+      image: '/site/service-maintenance.svg'
     },
     {
       id: 3,
       title: 'تفصيل رخام مطابخ',
       description: 'نُتقن تركيب جميع أنواع الرخام الصناعي والطبيعي بأسلوب احترافي يضمن المتانة والجمال وسهولة الاستخدام، مع قص وتركيب دقيق ومطابق للمقاسات.',
       icon: <Gem className="w-7 h-7" />,
-      image: '/blog/kitchen-countertop-installation-jeddah.svg'
+      image: '/site/service-marble.svg'
     },
     {
       id: 4,
       title: 'إكسسوارات وتشطيبات',
       description: 'تشطيبات مطابخ حديثة تجمع بين الجمال والعملية، نهتم بتركيب الإكسسوارات العصرية والسلال المخفية واللمسات النهائية التي تضفي حيوية وسهولة.',
       icon: <Layers className="w-7 h-7" />,
-      image: '/blog/wood-kitchen-installation-jeddah.svg'
+      image: '/site/service-accessories.svg'
     }
   ];
 
@@ -147,12 +147,9 @@ export default function MoalemMatabekh() {
   ];
 
   const galleryImages = [
-    "/blog/kitchen-installation-jeddah.svg",
-    "/blog/kitchen-maintenance-jeddah.svg",
-    "/blog/kitchen-countertop-installation-jeddah.svg",
-    "/blog/wood-kitchen-installation-jeddah.svg",
-    "/blog/kitchen-maintenance-jeddah.svg",
-    "/blog/kitchen-countertop-installation-jeddah.svg",
+    "/site/hero-1.svg",
+    "/site/hero-2.svg",
+    "/site/hero-3.svg",
   ];
 
   return (
@@ -264,7 +261,7 @@ export default function MoalemMatabekh() {
               priority
               sizes="100vw"
               quality={85}
-              referrerPolicy="no-referrer"
+              unoptimized
             />
             <div className="absolute inset-0 bg-gradient-to-l from-stone-950/90 via-stone-950/60 to-transparent"></div>
           </motion.div>
@@ -427,7 +424,7 @@ export default function MoalemMatabekh() {
                     loading="lazy"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                     quality={75}
-                    referrerPolicy="no-referrer"
+                    unoptimized
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-stone-900 to-transparent"></div>
                 </div>
@@ -464,7 +461,7 @@ export default function MoalemMatabekh() {
                 viewport={{ once: true }}
                 className="relative w-full aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl"
               >
-                <Image src="/blog/ikea-kitchen-installation-jeddah.svg" alt="جودة تنفيذ وتركيب المطابخ في جدة" fill className="object-cover" unoptimized />
+                <Image src="/site/why-us.svg" alt="جودة تنفيذ وتركيب المطابخ في جدة" fill className="object-cover" unoptimized />
               </motion.div>
             </div>
 
