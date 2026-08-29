@@ -325,7 +325,7 @@ export default function MoalemMatabekh() {
                 viewport={{ once: true }}
                 className="relative w-full aspect-[4/5] sm:aspect-square md:aspect-[4/3] lg:aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl"
               >
-                <Image src="/blog/wood-kitchen-installation-jeddah.svg" alt="معلم مطابخ جدة أثناء تنفيذ أعمال المطابخ" fill className="object-cover" unoptimized />
+                <Image src="/site/about.svg" alt="معلم مطابخ جدة أثناء تنفيذ أعمال المطابخ" fill className="object-cover object-center" unoptimized />
               </motion.div>
               
               {/* Experience Badge */}
@@ -420,7 +420,7 @@ export default function MoalemMatabekh() {
                     src={service.image}
                     alt={service.title}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100"
+                    className="object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 opacity-90 group-hover:opacity-100"
                     loading="lazy"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                     quality={75}
