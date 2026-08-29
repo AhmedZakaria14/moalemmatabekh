@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     description: 'الأفضل في تصميم، تفصيل، تركيب، وصيانة المطابخ وتركيب الرخام الصناعي والطبيعي في جدة وكافة أحيائها (الحمدانية، أبحر، الصفا، المروة). استشارة مجانية وسرعة في الإنجاز.',
     images: [
       {
-        url: 'https://res.cloudinary.com/dxvjqrb9l/image/upload/v1781439759/%D9%85%D8%B9%D9%84%D9%85_%D9%85%D8%B7%D8%A7%D8%A8%D8%AE_sda9ba.png',
+        url: 'https://matabekhjeddah.com/moalem-matabekh-logo.svg',
         width: 800,
         height: 600,
         alt: 'معلم مطابخ جدة لخدمات تفصيل وتركيب المطابخ والرخام',
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'معلم مطابخ جدة | تفصيل وتركيب وصيانة مطابخ ورخام',
     description: 'تفصيل، تركيب وصيانة مطابخ وتركيب رخام مطابخ بأعلى جودة بجدة.',
-    images: ['https://res.cloudinary.com/dxvjqrb9l/image/upload/v1781439759/%D9%85%D8%B9%D9%84%D9%85_%D9%85%D8%B7%D8%A7%D8%A8%D8%AE_sda9ba.png'],
+    images: ['https://matabekhjeddah.com/moalem-matabekh-logo.svg'],
   },
   alternates: {
     canonical: 'https://matabekhjeddah.com',
@@ -77,7 +77,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "HomeAndConstructionBusiness",
   "name": "معلم مطابخ جدة",
-  "image": "https://res.cloudinary.com/dxvjqrb9l/image/upload/v1781439759/%D9%85%D8%B9%D9%84%D9%85_%D9%85%D8%B7%D8%A7%D8%A8%D8%AE_sda9ba.png",
+  "image": "https://matabekhjeddah.com/moalem-matabekh-logo.svg",
   "@id": "https://matabekhjeddah.com/#company",
   "url": "https://matabekhjeddah.com",
   "telephone": "+966567659475",
