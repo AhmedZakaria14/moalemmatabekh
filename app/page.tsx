@@ -71,17 +71,17 @@ export default function MoalemMatabekh() {
     {
       title: "تفصيل وتركيب مطابخ حديثة بتشطيب احترافي في جدة",
       description: "معلم مطابخ جدة – دقة التنفيذ، جمال التفاصيل",
-      image: "https://res.cloudinary.com/dxvjqrb9l/image/upload/w_1600,q_auto,f_auto/v1781396929/hero-bg1.jpg_s0urew.jpg"
+      image: "/blog/kitchen-installation-jeddah.svg"
     },
     {
       title: "صيانة وتجديد مطابخ تعيد لمطبخك كفاءته وأناقتـه",
       description: "فني صيانة مطابخ بجدة – استبدال مفصلات وأدراج",
-      image: "https://res.cloudinary.com/dxvjqrb9l/image/upload/w_1600,q_auto,f_auto/v1781396928/blog1_w5gduo.jpg"
+      image: "/blog/kitchen-maintenance-jeddah.svg"
     },
     {
       title: "تركيب رخام مطابخ صناعي وطبيعي بأعلى دقة",
       description: "أفضل معلم تركيب رخام مطابخ في جميع أحياء جدة",
-      image: "https://res.cloudinary.com/dxvjqrb9l/image/upload/w_1600,q_auto,f_auto/v1781396928/blog2_jbgmew.jpg"
+      image: "/blog/kitchen-countertop-installation-jeddah.svg"
     }
   ];
 
@@ -98,28 +98,28 @@ export default function MoalemMatabekh() {
       title: 'تفصيل وتركيب مطابخ',
       description: 'نقدم حلول متكاملة في تركيب جميع قطاعات المطابخ: الألمنيوم، الخشب، الصاج، والكلادينج (ومكس الخامات)، من التصميم وحتى التنفيذ النهائي.',
       icon: <Hammer className="w-7 h-7" />,
-      image: 'https://res.cloudinary.com/dxvjqrb9l/image/upload/w_800,q_auto,f_auto/v1781396928/D8_AA_D8_B1_D9_83_D9_8A_D8_A8-_D9_85_D8_B7_D8_A7_D8_A8_D8_AE.jpg_xi9q5l.jpg'
+      image: '/blog/kitchen-installation-jeddah.svg'
     },
     {
       id: 2,
       title: 'تجديد وصيانة شاملة',
       description: 'خدمات صيانة شاملة للمطابخ وتجديدها بالكامل لتبدو كأنها جديدة؛ استبدال المفصلات، أدراج السحب، الأبواب، ومسكات الخزائن بحرفية عالية.',
       icon: <Wrench className="w-7 h-7" />,
-      image: 'https://res.cloudinary.com/dxvjqrb9l/image/upload/w_800,q_auto,f_auto/v1781396928/D8_B5_D9_8A_D8_A7_D9_86_D8_A9-_D9_85_D8_B7_D8_A7_D8_A8_D8_AE.png_d9o8oc.jpg'
+      image: '/blog/kitchen-maintenance-jeddah.svg'
     },
     {
       id: 3,
       title: 'تفصيل رخام مطابخ',
       description: 'نُتقن تركيب جميع أنواع الرخام الصناعي والطبيعي بأسلوب احترافي يضمن المتانة والجمال وسهولة الاستخدام، مع قص وتركيب دقيق ومطابق للمقاسات.',
       icon: <Gem className="w-7 h-7" />,
-      image: 'https://res.cloudinary.com/dxvjqrb9l/image/upload/w_800,q_auto,f_auto/v1781396927/D8_AA_D8_B1_D9_83_D9_8A_D8_A8-_D8_B1_D8_AE_D8_A7_D9_85_myoltn.jpg'
+      image: '/blog/kitchen-countertop-installation-jeddah.svg'
     },
     {
       id: 4,
       title: 'إكسسوارات وتشطيبات',
       description: 'تشطيبات مطابخ حديثة تجمع بين الجمال والعملية، نهتم بتركيب الإكسسوارات العصرية والسلال المخفية واللمسات النهائية التي تضفي حيوية وسهولة.',
       icon: <Layers className="w-7 h-7" />,
-      image: 'https://res.cloudinary.com/dxvjqrb9l/image/upload/w_800,q_auto,f_auto/v1781396928/blog3_yscypf.jpg'
+      image: '/blog/wood-kitchen-installation-jeddah.svg'
     }
   ];
 
@@ -147,12 +147,12 @@ export default function MoalemMatabekh() {
   ];
 
   const galleryImages = [
-    "https://res.cloudinary.com/dxvjqrb9l/image/upload/w_800,q_auto,f_auto/v1781396928/D8_AA_D8_B1_D9_83_D9_8A_D8_A8-_D9_85_D8_B7_D8_A7_D8_A8_D8_AE.jpg_xi9q5l.jpg",
-    "https://res.cloudinary.com/dxvjqrb9l/image/upload/w_800,q_auto,f_auto/v1781396928/D8_B5_D9_8A_D8_A7_D9_86_D8_A9-_D9_85_D8_B7_D8_A7_D8_A8_D8_AE.png_d9o8oc.jpg",
-    "https://res.cloudinary.com/dxvjqrb9l/image/upload/w_800,q_auto,f_auto/v1781396927/D8_AA_D8_B1_D9_83_D9_8A_D8_A8-_D8_B1_D8_AE_D8_A7_D9_85_myoltn.jpg",
-    "https://res.cloudinary.com/dxvjqrb9l/image/upload/w_800,q_auto,f_auto/v1781396928/blog3_yscypf.jpg",
-    "https://res.cloudinary.com/dxvjqrb9l/image/upload/w_800,q_auto,f_auto/v1781396928/blog1_w5gduo.jpg",
-    "https://res.cloudinary.com/dxvjqrb9l/image/upload/w_800,q_auto,f_auto/v1781396928/blog2_jbgmew.jpg",
+    "/blog/kitchen-installation-jeddah.svg",
+    "/blog/kitchen-maintenance-jeddah.svg",
+    "/blog/kitchen-countertop-installation-jeddah.svg",
+    "/blog/wood-kitchen-installation-jeddah.svg",
+    "/blog/kitchen-maintenance-jeddah.svg",
+    "/blog/kitchen-countertop-installation-jeddah.svg",
   ];
 
   return (
@@ -174,7 +174,7 @@ export default function MoalemMatabekh() {
         <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
           <Link href="/" className="relative z-10 flex items-center gap-2">
             <Image 
-              src={(scrolled || isMenuOpen) ? "https://res.cloudinary.com/dxvjqrb9l/image/upload/v1781439759/%D9%85%D8%B9%D9%84%D9%85_%D9%85%D8%B7%D8%A7%D8%A8%D8%AE_sda9ba.png" : "https://res.cloudinary.com/dxvjqrb9l/image/upload/v1781442195/%D9%85%D8%B9%D9%84%D9%85_%D9%85%D8%B7%D8%A7%D8%A8%D8%AE_2-removebg-preview_lc4mso.png"}
+              src={(scrolled || isMenuOpen) ? "/moalem-matabekh-logo.svg" : "/moalem-matabekh-logo.svg"}
               alt="معلم مطابخ جدة"
               width={160}
               height={50}
@@ -328,11 +328,7 @@ export default function MoalemMatabekh() {
                 viewport={{ once: true }}
                 className="relative w-full aspect-[4/5] sm:aspect-square md:aspect-[4/3] lg:aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl"
               >
-                <video 
-                  src="https://res.cloudinary.com/dxvjqrb9l/video/upload/v1781444712/aboutUS_vtdyyi.mp4" 
-                  autoPlay loop muted playsInline 
-                  className="absolute inset-0 w-full h-full object-cover" 
-                />
+                <Image src="/blog/wood-kitchen-installation-jeddah.svg" alt="معلم مطابخ جدة أثناء تنفيذ أعمال المطابخ" fill className="object-cover" unoptimized />
               </motion.div>
               
               {/* Experience Badge */}
@@ -468,11 +464,7 @@ export default function MoalemMatabekh() {
                 viewport={{ once: true }}
                 className="relative w-full aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl"
               >
-                <video 
-                  src="https://res.cloudinary.com/dxvjqrb9l/video/upload/v1781444696/whyUS_tuvvm6.mp4" 
-                  autoPlay loop muted playsInline 
-                  className="absolute inset-0 w-full h-full object-cover" 
-                />
+                <Image src="/blog/ikea-kitchen-installation-jeddah.svg" alt="جودة تنفيذ وتركيب المطابخ في جدة" fill className="object-cover" unoptimized />
               </motion.div>
             </div>
 
@@ -791,7 +783,7 @@ export default function MoalemMatabekh() {
             <div className="lg:col-span-1 border-b border-stone-800 pb-8 lg:border-0 lg:pb-0">
               <Link href="/" className="mb-6 inline-block">
                 <Image 
-                  src="https://res.cloudinary.com/dxvjqrb9l/image/upload/v1781439759/%D9%85%D8%B9%D9%84%D9%85_%D9%85%D8%B7%D8%A7%D8%A8%D8%AE_sda9ba.png"
+                  src="/moalem-matabekh-logo.svg"
                   alt="معلم مطابخ جدة"
                   width={150}
                   height={50}
