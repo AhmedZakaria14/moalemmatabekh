@@ -52,9 +52,7 @@ export default function SiteHeader() {
         <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
           <Link href="/" className="relative z-10 flex items-center gap-2" onClick={closeMenu}>
             <Image
-              src={solidHeader
-                ? 'https://res.cloudinary.com/dxvjqrb9l/image/upload/v1781439759/%D9%85%D8%B9%D9%84%D9%85_%D9%85%D8%B7%D8%A7%D8%A8%D8%AE_sda9ba.png'
-                : 'https://res.cloudinary.com/dxvjqrb9l/image/upload/v1781442195/%D9%85%D8%B9%D9%84%D9%85_%D9%85%D8%B7%D8%A7%D8%A8%D8%AE_2-removebg-preview_lc4mso.png'}
+              src="/moalem-matabekh-logo.svg"
               alt="معلم مطابخ جدة"
               width={160}
               height={50}
