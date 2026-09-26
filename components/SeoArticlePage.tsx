@@ -18,6 +18,11 @@ export default async function SeoArticlePage({ article }: { article: SeoArticle 
   return (
     <div className="min-h-screen bg-stone-50" dir="rtl">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', inLanguage: 'ar-SA', itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'الرئيسية', item: 'https://matabekhjeddah.com/' },
+        { '@type': 'ListItem', position: 2, name: 'المدونة', item: 'https://matabekhjeddah.com/blog' },
+        { '@type': 'ListItem', position: 3, name: article.title, item: articleUrl },
+      ] }) }} />
       <section className="pt-32 pb-14 bg-white border-b border-stone-200">
         <div className="container mx-auto px-6 md:px-12"><div className="max-w-4xl mx-auto">
           <Link href="/blog" className="inline-flex items-center gap-2 text-stone-500 hover:text-amber-600 transition-colors mb-8 font-medium"><ArrowRight className="w-4 h-4" /> العودة للمدونة</Link>
