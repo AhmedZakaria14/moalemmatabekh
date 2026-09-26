@@ -1,5 +1,6 @@
 import type {Metadata, Viewport} from 'next';
 import { Cairo } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 
 const cairo = Cairo({
@@ -17,6 +18,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://matabekhjeddah.com'),
   title: {
     default: 'معلم مطابخ جدة | تفصيل، تركيب، وصيانة مطابخ ورخام بأفضل الأسعار',
     template: '%s | معلم مطابخ جدة'
@@ -53,7 +55,7 @@ export const metadata: Metadata = {
     images: ['https://matabekhjeddah.com/moalem-matabekh-logo.svg'],
   },
   alternates: {
-    canonical: 'https://matabekhjeddah.com',
+    canonical: 'https://matabekhjeddah.com/',
   },
   robots: {
     index: true,
@@ -139,6 +141,13 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
       </head>
       <body className="font-cairo antialiased" suppressHydrationWarning>
         {children}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-ZB1J2KBEQ7" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-ZB1J2KBEQ7');
+        `}</Script>
       </body>
     </html>
   );
