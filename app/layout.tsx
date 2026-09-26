@@ -18,14 +18,14 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://matabekhjeddah.com'),
+  metadataBase: new URL('https://www.matabekhjeddah.com'),
   title: {
     default: 'معلم مطابخ جدة | تفصيل، تركيب، وصيانة مطابخ ورخام بأفضل الأسعار',
     template: '%s | معلم مطابخ جدة'
   },
   description: 'أفضل معلم مطابخ بجدة متخصص في تصميم، تفصيل، تركيب، وصيانة المطابخ ومزج الخامات العصرية (خشب، ألمنيوم، صاج، كلادينج). تغيير أبواب الخزائن وتفصيل رخام المطابخ بدقة عالية. اتصل 0567659475.',
   keywords: ['معلم مطابخ', 'معلم مطابخ جدة', 'تفصيل مطابخ', 'تركيب مطابخ جدة', 'مطابخ خشب', 'مطابخ صاج', 'مطابخ المنيوم بجدة', 'مطابخ فرميكا', 'كلادينج مطابخ', 'مكس وتصميم مطابخ', 'صيانة مطابخ بجدة', 'تجديد مطابخ قديمة', 'فني تركيب مطابخ', 'تركيب رخام مطابخ'],
-  authors: [{ name: 'معلم مطابخ جدة', url: 'https://matabekhjeddah.com' }],
+  authors: [{ name: 'معلم مطابخ جدة', url: 'https://www.matabekhjeddah.com' }],
   creator: 'معلم مطابخ جدة',
   formatDetection: {
     telephone: true,
@@ -35,13 +35,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'ar_SA',
-    url: 'https://matabekhjeddah.com',
+    url: 'https://www.matabekhjeddah.com',
     siteName: 'معلم مطابخ جدة',
     title: 'معلم مطابخ جدة | الأفضل في تفصيل وتركيب وصيانة المطابخ',
     description: 'الأفضل في تصميم، تفصيل، تركيب، وصيانة المطابخ وتركيب الرخام الصناعي والطبيعي في جدة وكافة أحيائها (الحمدانية، أبحر، الصفا، المروة). استشارة مجانية وسرعة في الإنجاز.',
     images: [
       {
-        url: 'https://matabekhjeddah.com/moalem-matabekh-logo.svg',
+        url: 'https://www.matabekhjeddah.com/moalem-matabekh-logo.svg',
         width: 800,
         height: 600,
         alt: 'معلم مطابخ جدة لخدمات تفصيل وتركيب المطابخ والرخام',
@@ -52,10 +52,10 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'معلم مطابخ جدة | تفصيل وتركيب وصيانة مطابخ ورخام',
     description: 'تفصيل، تركيب وصيانة مطابخ وتركيب رخام مطابخ بأعلى جودة بجدة.',
-    images: ['https://matabekhjeddah.com/moalem-matabekh-logo.svg'],
+    images: ['https://www.matabekhjeddah.com/moalem-matabekh-logo.svg'],
   },
   alternates: {
-    canonical: 'https://matabekhjeddah.com/',
+    canonical: 'https://www.matabekhjeddah.com/',
   },
   robots: {
     index: true,
@@ -79,9 +79,9 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "HomeAndConstructionBusiness",
   "name": "معلم مطابخ جدة",
-  "image": "https://matabekhjeddah.com/moalem-matabekh-logo.svg",
-  "@id": "https://matabekhjeddah.com/#company",
-  "url": "https://matabekhjeddah.com",
+  "image": "https://www.matabekhjeddah.com/moalem-matabekh-logo.svg",
+  "@id": "https://www.matabekhjeddah.com/#company",
+  "url": "https://www.matabekhjeddah.com",
   "telephone": "+966567659475",
   "priceRange": "$$",
   "address": {

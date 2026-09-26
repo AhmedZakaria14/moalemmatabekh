@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: 'المدونة | نصائح ومعلومات عن المطابخ',
   description: 'اقرأ أحدث المقالات والنصائح حول تفصيل وتركيب وصيانة المطابخ في جدة، مع أدلة عملية لاختيار الخامات والفني المناسب.',
   keywords: ['مدونة مطابخ', 'تركيب مطابخ', 'فني مطابخ جدة', 'نصائح مطابخ', 'تفصيل مطابخ'],
-  alternates: { canonical: 'https://matabekhjeddah.com/blog' },
+  alternates: { canonical: 'https://www.matabekhjeddah.com/blog' },
 };
 
 export default function BlogListingPage() {

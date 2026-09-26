@@ -6,12 +6,12 @@ import type { SeoArticle } from '@/lib/seo-articles';
 
 export default async function SeoArticlePage({ article }: { article: SeoArticle }) {
   const { content, tableOfContents } = await loadGoogleDocArticle(article);
-  const articleUrl = `https://matabekhjeddah.com/blog/${article.slug}`;
-  const imageUrl = `https://matabekhjeddah.com${article.coverImage}`;
+  const articleUrl = `https://www.matabekhjeddah.com/blog/${article.slug}`;
+  const imageUrl = `https://www.matabekhjeddah.com${article.coverImage}`;
   const jsonLd = {
     '@context': 'https://schema.org', '@type': 'Article', headline: article.title, description: article.excerpt, image: [imageUrl],
     datePublished: article.date, dateModified: article.updated, author: { '@type': 'Organization', name: article.author },
-    publisher: { '@type': 'Organization', name: 'معلم مطابخ جدة', url: 'https://matabekhjeddah.com' },
+    publisher: { '@type': 'Organization', name: 'معلم مطابخ جدة', url: 'https://www.matabekhjeddah.com' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': articleUrl }, keywords: article.keywords.join(', '),
   };
 
@@ -19,8 +19,8 @@ export default async function SeoArticlePage({ article }: { article: SeoArticle 
     <div className="min-h-screen bg-stone-50" dir="rtl">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', inLanguage: 'ar-SA', itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'الرئيسية', item: 'https://matabekhjeddah.com/' },
-        { '@type': 'ListItem', position: 2, name: 'المدونة', item: 'https://matabekhjeddah.com/blog' },
+        { '@type': 'ListItem', position: 1, name: 'الرئيسية', item: 'https://www.matabekhjeddah.com/' },
+        { '@type': 'ListItem', position: 2, name: 'المدونة', item: 'https://www.matabekhjeddah.com/blog' },
         { '@type': 'ListItem', position: 3, name: article.title, item: articleUrl },
       ] }) }} />
       <section className="pt-32 pb-14 bg-white border-b border-stone-200">
