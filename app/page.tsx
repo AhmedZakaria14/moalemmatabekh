@@ -24,6 +24,33 @@ import {
   ZoomIn
 } from 'lucide-react';
 
+const frequentlyAskedQuestions = [
+  {
+    "question": "ما أنواع المطابخ التي تقومون بتفصيلها في جدة؟",
+    "answer": "نقدم خدمات تفصيل وتركيب مطابخ الألمنيوم والخشب والصاج والكلادينج والمطابخ المكس، مع تنفيذ المقاسات المناسبة لمساحة المنزل."
+  },
+  {
+    "question": "هل تقدمون خدمة معاينة وقياس المطبخ؟",
+    "answer": "نعم، تبدأ الخدمة بمعاينة المكان وأخذ المقاسات اللازمة لتحديد التصميم والخامات المناسبة للمساحة."
+  },
+  {
+    "question": "هل تقدمون صيانة وتجديد المطابخ القديمة؟",
+    "answer": "نعم، نقدم خدمات تجديد وصيانة المطابخ، ومنها تغيير الأبواب والمفصلات وأدراج السحب والمسكات وبعض التشطيبات."
+  },
+  {
+    "question": "هل تقومون بتركيب رخام المطابخ؟",
+    "answer": "نعم، نقدم خدمة تفصيل وتركيب رخام المطابخ الصناعي والطبيعي مع القص والتركيب حسب المقاسات."
+  },
+  {
+    "question": "ما المناطق التي تخدمونها؟",
+    "answer": "نخدم أحياء جدة، ومنها الحمدانية وأبحر والصفا والمروة، ويمكن التواصل معنا لتأكيد إمكانية الخدمة في موقعك."
+  },
+  {
+    "question": "كيف أطلب عرض سعر؟",
+    "answer": "يمكنك التواصل عبر الهاتف 0567659475 أو عبر واتساب لإرسال تفاصيل الطلب وتحديد موعد المعاينة."
+  }
+];
+
 export default function MoalemMatabekh() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -628,6 +655,27 @@ export default function MoalemMatabekh() {
           </div>
         </div>
       </section>
+
+      {/* Frequently asked questions shown alongside their structured data */}
+      <section id="faq" className="py-20 bg-white" aria-labelledby="faq-heading">
+        <div className="container mx-auto px-6 md:px-12 max-w-4xl">
+          <h2 id="faq-heading" className="text-3xl font-black text-stone-900 mb-8">الأسئلة الشائعة عن خدمات المطابخ في جدة</h2>
+          <div className="space-y-4">
+            {frequentlyAskedQuestions.map(({ question, answer }) => (
+              <details key={question} className="group rounded-2xl border border-stone-200 bg-stone-50 p-5">
+                <summary className="cursor-pointer font-bold text-stone-900">{question}</summary>
+                <p className="mt-3 leading-8 text-stone-700">{answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: 'ar-SA',
+        mainEntity: frequentlyAskedQuestions.map(({ question, answer }) => ({
+          '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer },
+        })),
+      }) }} />
 
       {/* Contact Section */}
       <section id="contact" className="py-24 md:py-32 bg-white relative">
