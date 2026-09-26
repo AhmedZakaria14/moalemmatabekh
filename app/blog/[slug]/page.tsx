@@ -24,6 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${post.title} | مدونة معلم مطابخ جدة`,
     description: post.excerpt,
     keywords: post.tags,
+    alternates: { canonical: `https://matabekhjeddah.com/blog/${post.slug}` },
     openGraph: {
       title: post.title,
       description: post.excerpt,
@@ -54,6 +55,11 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <div className="min-h-screen bg-stone-50" dir="rtl">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', inLanguage: 'ar-SA', itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'الرئيسية', item: 'https://matabekhjeddah.com/' },
+        { '@type': 'ListItem', position: 2, name: 'المدونة', item: 'https://matabekhjeddah.com/blog' },
+        { '@type': 'ListItem', position: 3, name: post.title, item: `https://matabekhjeddah.com/blog/${post.slug}` },
+      ] }) }} />
       {/* Article Header */}
       <section className="pt-32 pb-16 bg-white border-b border-stone-200">
         <div className="container mx-auto px-6 md:px-12">
