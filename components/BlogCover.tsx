@@ -1,7 +1,7 @@
 import React from 'react';
 
-const x = ['0%', '25.6%', '50.6%', '75.8%', '100%'];
-const y = ['0%', '43%', '88%'];
+const xOffset = [0, -102.4, -202.4, -303.2, -400];
+const yOffset = [0, -140.5, -287.5];
 
 const tileBySlug: Record<string, [number, number]> = {
   'aluminum-kitchen-maintenance-technician': [0, 0],
@@ -44,16 +44,29 @@ function fallbackTile(slug: string): [number, number] {
 
 export const BLOG_COVER_SPRITE = '/blog/ai/blog-covers-sprite.webp';
 
-export function getBlogCoverStyle(slug: string): React.CSSProperties {
-  const [col, row] = tileBySlug[slug] ?? fallbackTile(slug);
-  return {
-    backgroundImage: `url(${BLOG_COVER_SPRITE})`,
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: '500% 426.67%',
-    backgroundPosition: `${x[col]} ${y[row]}`,
-  };
+export function getBlogCoverSrc() {
+  return BLOG_COVER_SPRITE;
 }
 
 export default function BlogCover({ slug, alt, className = '' }: { slug: string; alt: string; className?: string }) {
-  return <div role="img" aria-label={alt} className={className} style={getBlogCoverStyle(slug)} />;
+  const [col, row] = tileBySlug[slug] ?? fallbackTile(slug);
+
+  return (
+    <div className={`overflow-hidden bg-stone-200 ${className}`} role="img" aria-label={alt}>
+      <img
+        src={BLOG_COVER_SPRITE}
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
+        decoding="async"
+        className="absolute max-w-none select-none pointer-events-none"
+        style={{
+          width: '500%',
+          height: '426.67%',
+          left: `${xOffset[col]}%`,
+          top: `${yOffset[row]}%`,
+        }}
+      />
+    </div>
+  );
 }
