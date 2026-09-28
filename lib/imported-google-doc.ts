@@ -22,11 +22,20 @@ const normalizeGoogleLinks = (html: string) => html.replace(/href="https:\/\/www
 });
 
 const removeMetaDescriptionBlock = (html: string) => {
-  // Google Docs exports the label and its description as adjacent paragraphs.
-  return html.replace(
-    /<p[^>]*>[\s\S]*?Meta\s*description\s*:?[\s\S]*?<\/p>\s*<p[^>]*>[\s\S]*?<\/p>/i,
-    ''
-  );
+  const paragraphRegex = /<p[^>]*>[\s\S]*?<\/p>/gi;
+  const paragraphs = Array.from(html.matchAll(paragraphRegex));
+  const metaIndex = paragraphs.findIndex((match) => /^meta\s*description\s*:?$/i.test(stripTags(match[0])));
+  if (metaIndex < 0) return html;
+
+  const first = paragraphs[metaIndex];
+  const second = paragraphs[metaIndex + 1];
+  const start = first.index ?? 0;
+  const firstEnd = start + first[0].length;
+  const end = second && (second.index ?? firstEnd) >= firstEnd
+    ? (second.index ?? firstEnd) + second[0].length
+    : firstEnd;
+
+  return `${html.slice(0, start)}${html.slice(end)}`;
 };
 
 export async function loadImportedGoogleDoc(slug: string) {
