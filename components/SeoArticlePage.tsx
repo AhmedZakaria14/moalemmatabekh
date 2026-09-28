@@ -1,13 +1,13 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { Calendar, Clock, User, ArrowRight, List, Phone } from 'lucide-react';
 import { loadGoogleDocArticle } from '@/lib/google-doc-article';
 import type { SeoArticle } from '@/lib/seo-articles';
+import BlogCover, { BLOG_COVER_SPRITE } from '@/components/BlogCover';
 
 export default async function SeoArticlePage({ article }: { article: SeoArticle }) {
   const { content, tableOfContents } = await loadGoogleDocArticle(article);
   const articleUrl = `https://www.matabekhjeddah.com/blog/${article.slug}`;
-  const imageUrl = `https://www.matabekhjeddah.com${article.coverImage}`;
+  const imageUrl = `https://www.matabekhjeddah.com${BLOG_COVER_SPRITE}`;
   const jsonLd = {
     '@context': 'https://schema.org', '@type': 'Article', headline: article.title, description: article.excerpt, image: [imageUrl],
     datePublished: article.date, dateModified: article.updated, author: { '@type': 'Organization', name: article.author },
@@ -37,7 +37,7 @@ export default async function SeoArticlePage({ article }: { article: SeoArticle 
           <div className="bg-white p-6 rounded-2xl shadow-sm border border-stone-100"><h2 className="text-lg font-bold text-stone-900 mb-4 flex items-center gap-2"><List className="w-5 h-5 text-amber-500" /> محتويات المقال</h2><nav aria-label="جدول محتويات المقال"><ul className="space-y-3">{tableOfContents.map((item) => <li key={item.id}><a href={`#${item.id}`} className="text-stone-600 hover:text-amber-600 transition-colors block text-sm leading-relaxed">{item.title}</a></li>)}</ul></nav></div>
           <div className="bg-stone-900 rounded-2xl p-8 text-center text-white shadow-lg border-b-4 border-amber-500"><h2 className="text-xl font-bold mb-4">تحتاج فني مطابخ في جدة؟</h2><p className="text-stone-300 text-sm mb-6 leading-relaxed">تواصل معنا لمعاينة المطبخ والحصول على استشارة وعرض سعر مناسب للخدمة المطلوبة.</p><a href="tel:0567659475" className="inline-flex w-full items-center justify-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-6 rounded-xl transition-colors"><Phone className="w-4 h-4" /><span dir="ltr">056 765 9475</span></a></div>
         </aside>
-        <article className="w-full lg:w-2/3 order-1 lg:order-2"><div className="relative w-full aspect-[16/9] mb-12 rounded-3xl overflow-hidden shadow-md bg-stone-200"><Image src={article.coverImage} alt={article.title} fill unoptimized sizes="(max-width: 1024px) 100vw, 760px" className="object-cover" priority /></div><div className="prose-container" dangerouslySetInnerHTML={{ __html: content }} /></article>
+        <article className="w-full lg:w-2/3 order-1 lg:order-2"><div className="relative w-full aspect-[16/9] mb-12 rounded-3xl overflow-hidden shadow-md bg-stone-200"><BlogCover slug={article.slug} alt={article.title} className="absolute inset-0 w-full h-full" /></div><div className="prose-container" dangerouslySetInnerHTML={{ __html: content }} /></article>
       </div></div></section>
     </div>
   );
