@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Calendar, Clock, User, ArrowLeft } from 'lucide-react';
 import { blogPosts } from '@/lib/all-blog-posts';
 import { seoArticles } from '@/lib/seo-articles';
+import BlogCover from '@/components/BlogCover';
 
 export const metadata: Metadata = {
   title: 'المدونة | نصائح ومعلومات عن المطابخ',
@@ -12,10 +13,6 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.matabekhjeddah.com/blog' },
 };
 
-function BlogImage({ src, alt, className = '' }: { src: string; alt: string; className?: string }) {
-  return <img src={src} alt={alt} loading="lazy" decoding="async" className={className} />;
-}
-
 export default function BlogListingPage() {
   const allPosts = [...seoArticles, ...blogPosts];
   return (
@@ -23,7 +20,7 @@ export default function BlogListingPage() {
       <section className="relative pt-32 pb-20 bg-stone-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-stone-900/90 z-10" />
-          <BlogImage src={blogPosts[0]?.coverImage || '/blog/kitchen-installation-jeddah.svg'} alt="خلفية مدونة معلم مطابخ جدة" className="absolute inset-0 w-full h-full object-cover" />
+          <BlogCover slug="kitchen-installer-services-jeddah" alt="خلفية مدونة معلم مطابخ جدة" className="absolute inset-0 w-full h-full bg-cover" />
         </div>
         <div className="container relative z-20 mx-auto px-6 md:px-12 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">مدونة <span className="text-amber-500">معلم مطابخ جدة</span></h1>
@@ -36,8 +33,8 @@ export default function BlogListingPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {allPosts.map((post) => (
               <article key={post.slug} className="bg-white rounded-2xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-lg transition-all duration-300 group flex flex-col h-full">
-                <Link href={`/blog/${post.slug}`} className="block relative h-56 overflow-hidden">
-                  <BlogImage src={post.coverImage} alt={post.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <Link href={`/blog/${post.slug}`} className="block relative h-56 overflow-hidden bg-stone-200">
+                  <BlogCover slug={post.slug} alt={post.title} className="absolute inset-0 w-full h-full transition-transform duration-500 group-hover:scale-105" />
                   <div className="absolute top-4 right-4 flex gap-2 flex-wrap">
                     {post.tags.slice(0, 2).map((tag, idx) => <span key={idx} className="bg-white/90 backdrop-blur-sm text-stone-900 text-xs font-bold px-3 py-1 rounded-full">{tag}</span>)}
                   </div>
