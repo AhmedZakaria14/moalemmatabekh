@@ -13,12 +13,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = getBlogPost(slug);
   if (!post) return { title: 'مقال غير موجود' };
+  const imageUrl = post.coverImage.startsWith('http')
+    ? post.coverImage
+    : `https://www.matabekhjeddah.com${post.coverImage}`;
   return {
     title: `${post.title} | مدونة معلم مطابخ جدة`,
     description: post.excerpt,
     keywords: post.tags,
     alternates: { canonical: `https://www.matabekhjeddah.com/blog/${post.slug}` },
-    openGraph: { title: post.title, description: post.excerpt, images: [post.coverImage], type: 'article', publishedTime: post.date, authors: [post.author] },
+    openGraph: { title: post.title, description: post.excerpt, images: [{ url: imageUrl, width: 1200, height: 675, alt: post.title }], type: 'article', publishedTime: post.date, authors: [post.author] },
+    twitter: { card: 'summary_large_image', title: post.title, description: post.excerpt, images: [imageUrl] },
   };
 }
 
@@ -32,9 +36,12 @@ export default async function BlogPostPage({ params }: Props) {
   const post = loaded ? { ...basePost, ...loaded } : basePost;
   const relatedPosts = blogPosts.filter(p => p.id !== post.id && p.tags.some(tag => post.tags.includes(tag))).slice(0, 3);
   const fallbackRelated = relatedPosts.length ? relatedPosts : blogPosts.filter(p => p.id !== post.id).slice(0, 3);
+  const imageUrl = post.coverImage.startsWith('http')
+    ? post.coverImage
+    : `https://www.matabekhjeddah.com${post.coverImage}`;
   const articleSchema = {
     '@context': 'https://schema.org', '@type': 'Article', headline: post.title, description: post.excerpt,
-    image: [`https://www.matabekhjeddah.com${post.coverImage}`], datePublished: post.date, dateModified: post.date,
+    image: [imageUrl], datePublished: post.date, dateModified: post.date,
     author: { '@type': 'Person', name: post.author },
     mainEntityOfPage: `https://www.matabekhjeddah.com/blog/${post.slug}`,
     keywords: post.tags.join(', '), inLanguage: 'ar-SA'

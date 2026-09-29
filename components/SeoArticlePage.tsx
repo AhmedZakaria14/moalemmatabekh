@@ -7,7 +7,9 @@ import { BlogPostCover } from '@/components/BlogCover';
 export default async function SeoArticlePage({ article }: { article: SeoArticle }) {
   const { content, tableOfContents } = await loadGoogleDocArticle(article);
   const articleUrl = `https://www.matabekhjeddah.com/blog/${article.slug}`;
-  const imageUrl = `https://www.matabekhjeddah.com${article.coverImage}`;
+  const imageUrl = article.coverImage.startsWith('http')
+    ? article.coverImage
+    : `https://www.matabekhjeddah.com${article.coverImage}`;
   const jsonLd = {
     '@context': 'https://schema.org', '@type': 'Article', headline: article.title, description: article.excerpt, image: [imageUrl],
     datePublished: article.date, dateModified: article.updated, author: { '@type': 'Organization', name: article.author },
