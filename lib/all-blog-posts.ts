@@ -18,7 +18,7 @@ const importedBlogPosts: BlogPost[] = importedArticles.map((article) => ({
   content: '',
 }));
 
-const refreshedLegacyPosts: BlogPost[] = legacyBlogPosts.map((post) => ({ ...post, coverImage: aiKitchenImage }));
+const refreshedLegacyPosts: BlogPost[] = legacyBlogPosts;
 
 export const blogPosts: BlogPost[] = [...importedBlogPosts, ...refreshedLegacyPosts];
 export const getBlogPost = (slug: string) => blogPosts.find((post) => post.slug === slug);
