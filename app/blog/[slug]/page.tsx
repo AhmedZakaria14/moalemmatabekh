@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation';
 import { Calendar, Clock, User, ArrowRight, List } from 'lucide-react';
 import { blogPosts, getBlogPost } from '@/lib/all-blog-posts';
 import { loadImportedGoogleDoc } from '@/lib/imported-google-doc';
-import BlogCover from '@/components/BlogCover';
+import { BlogPostCover } from '@/components/BlogCover';
 
 interface Props { params: Promise<{ slug: string }> }
 
@@ -77,7 +77,7 @@ export default async function BlogPostPage({ params }: Props) {
 
         <article className="w-full lg:w-2/3 order-1 lg:order-2">
           <div className="relative w-full aspect-[16/9] mb-12 rounded-3xl overflow-hidden shadow-md bg-stone-200">
-            <BlogCover slug={post.slug} alt={post.title} className="absolute inset-0 w-full h-full" />
+            <BlogPostCover slug={post.slug} src={post.coverImage} alt={post.title} className="absolute inset-0 w-full h-full" />
           </div>
           <div className="prose prose-stone prose-lg max-w-none prose-headings:text-stone-900 prose-a:text-amber-600 prose-li:marker:text-amber-500" dangerouslySetInnerHTML={{ __html: post.content }} />
         </article>
@@ -85,7 +85,7 @@ export default async function BlogPostPage({ params }: Props) {
 
       <section className="py-16 bg-white border-t border-stone-200"><div className="container mx-auto px-6 md:px-12"><div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-stone-900 mb-10 text-center">مقالات ذات صلة</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">{fallbackRelated.map((related) => <Link key={related.id} href={`/blog/${related.slug}`} className="group bg-stone-50 rounded-2xl overflow-hidden border border-stone-100 hover:shadow-md transition-all"><div className="h-40 relative bg-stone-200"><BlogCover slug={related.slug} alt={related.title} className="absolute inset-0 w-full h-full group-hover:scale-105 transition-transform duration-500" /></div><div className="p-5"><span className="text-amber-600 text-xs font-bold">{related.tags[0]}</span><h3 className="font-bold mt-2 line-clamp-2 group-hover:text-amber-600">{related.title}</h3></div></Link>)}</div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">{fallbackRelated.map((related) => <Link key={related.id} href={`/blog/${related.slug}`} className="group bg-stone-50 rounded-2xl overflow-hidden border border-stone-100 hover:shadow-md transition-all"><div className="h-40 relative bg-stone-200"><BlogPostCover slug={related.slug} src={related.coverImage} alt={related.title} className="absolute inset-0 w-full h-full group-hover:scale-105 transition-transform duration-500" /></div><div className="p-5"><span className="text-amber-600 text-xs font-bold">{related.tags[0]}</span><h3 className="font-bold mt-2 line-clamp-2 group-hover:text-amber-600">{related.title}</h3></div></Link>)}</div>
       </div></div></section>
     </div>
   );
