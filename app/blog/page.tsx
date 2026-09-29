@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Calendar, Clock, User, ArrowLeft } from 'lucide-react';
 import { blogPosts } from '@/lib/all-blog-posts';
 import { seoArticles } from '@/lib/seo-articles';
-import BlogCover from '@/components/BlogCover';
+import BlogCover, { BlogPostCover } from '@/components/BlogCover';
 
 export const metadata: Metadata = {
   title: 'المدونة | نصائح ومعلومات عن المطابخ',
@@ -34,7 +34,7 @@ export default function BlogListingPage() {
             {allPosts.map((post) => (
               <article key={post.slug} className="bg-white rounded-2xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-lg transition-all duration-300 group flex flex-col h-full">
                 <Link href={`/blog/${post.slug}`} className="block relative h-56 overflow-hidden bg-stone-200">
-                  <BlogCover slug={post.slug} alt={post.title} className="absolute inset-0 w-full h-full transition-transform duration-500 group-hover:scale-105" />
+                  <BlogPostCover slug={post.slug} src={post.coverImage} alt={post.title} className="absolute inset-0 w-full h-full transition-transform duration-500 group-hover:scale-105" />
                   <div className="absolute top-4 right-4 flex gap-2 flex-wrap">
                     {post.tags.slice(0, 2).map((tag, idx) => <span key={idx} className="bg-white/90 backdrop-blur-sm text-stone-900 text-xs font-bold px-3 py-1 rounded-full">{tag}</span>)}
                   </div>
