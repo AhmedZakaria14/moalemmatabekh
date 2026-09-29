@@ -43,9 +43,20 @@ export async function loadImportedGoogleDoc(slug: string) {
   if (!article) return null;
 
   const url = `https://docs.google.com/document/d/${article.googleDocId}/export?format=html`;
-  const response = await fetch(url, { next: { revalidate: 86400 } });
-  if (!response.ok) throw new Error(`Unable to load article ${slug}: ${response.status}`);
-  const source = await response.text();
+  let source = '';
+
+  try {
+    const response = await fetch(url, { next: { revalidate: 86400 } });
+    if (!response.ok) throw new Error(`Unable to load article ${slug}: ${response.status}`);
+    source = await response.text();
+  } catch (error) {
+    console.warn(`Falling back to local article summary for ${slug}`, error);
+    return {
+      content: `<div class="prose prose-stone prose-lg max-w-none text-stone-700 leading-8"><p>${article.excerpt}</p><p>للحصول على تفاصيل الخدمة وحجز معاينة مناسبة داخل جدة، يمكنكم التواصل مباشرة مع معلم مطابخ جدة عبر الرقم <a href="tel:0567659475" class="text-amber-600 font-bold hover:underline" dir="ltr">056 765 9475</a>.</p></div>`,
+      tableOfContents: [],
+    };
+  }
+
   const bodyMatch = source.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
   let body = bodyMatch ? bodyMatch[1] : source;
 
