@@ -70,3 +70,31 @@ export default function BlogCover({ slug, alt, className = '' }: { slug: string;
     </div>
   );
 }
+
+export function BlogPostCover({
+  slug,
+  src,
+  alt,
+  className = '',
+}: {
+  slug: string;
+  src?: string;
+  alt: string;
+  className?: string;
+}) {
+  if (!src || src === BLOG_COVER_SPRITE) {
+    return <BlogCover slug={slug} alt={alt} className={className} />;
+  }
+
+  return (
+    <div className={`overflow-hidden bg-stone-200 ${className}`} role="img" aria-label={alt}>
+      <img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        decoding="async"
+        className="absolute inset-0 h-full w-full object-cover"
+      />
+    </div>
+  );
+}
