@@ -1,6 +1,18 @@
 import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
+  // Safety net: keep legacy apex URLs on the single indexable www host.
+  // Vercel also redirects the apex domain at its edge; this covers requests reaching Next directly.
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'matabekhjeddah.com' }],
+        destination: 'https://www.matabekhjeddah.com/:path*',
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [{ source: '/:path*', headers: [{ key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains' }] }];
   },
