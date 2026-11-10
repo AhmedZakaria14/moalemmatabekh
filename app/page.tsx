@@ -352,7 +352,7 @@ export default function MoalemMatabekh() {
                 viewport={{ once: true }}
                 className="relative w-full aspect-[4/5] sm:aspect-square md:aspect-[4/3] lg:aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl"
               >
-                <Image src="/site/about.svg" alt="معلم مطابخ جدة أثناء تنفيذ أعمال المطابخ" fill className="object-cover object-center" unoptimized />
+                <Image src="/site/about-kitchen.webp" alt="معلم مطابخ جدة أثناء تنفيذ أعمال المطابخ" fill className="object-cover object-center" unoptimized />
               </motion.div>
               
               {/* Experience Badge */}
