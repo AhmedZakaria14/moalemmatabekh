@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="t d">
+<title id="t">جرانيت أبيض للمطابخ</title><desc id="d">غلاف توضيحي لمقال جرانيت أبيض للمطابخ</desc>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#4c0519"/><stop offset="1" stop-color="#fb7185"/></linearGradient></defs>
+<rect width="1200" height="630" fill="url(#g)"/>
+<path d="M90 420 C250 330 390 500 560 380 S890 260 1110 360" fill="none" stroke="#fb7185" stroke-width="18" opacity=".75"/><path d="M140 520 C330 430 470 590 650 470 S930 390 1080 500" fill="none" stroke="#fb7185" stroke-width="8" opacity=".45"/><rect x="90" y="210" width="1020" height="260" rx="28" fill="white" opacity=".10"/>
+<rect x="70" y="545" width="1060" height="2" fill="#ffe4e6" opacity=".45"/>
+<text x="1100" y="585" direction="rtl" text-anchor="end" font-family="Arial,Tahoma,sans-serif" font-size="34" font-weight="700" fill="#ffe4e6">جرانيت أبيض للمطابخ</text>
+<text x="100" y="585" font-family="Arial,sans-serif" font-size="22" fill="#ffe4e6" opacity=".85">matabekhjeddah.com</text>
+</svg>
