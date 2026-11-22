@@ -18,6 +18,14 @@ const blogCoverBySlug: Record<string, string> = {
   'custom-kitchen-marble-jeddah': '/blog/photos/marble-countertop-kitchen.jpg',
   'best-custom-kitchen-shop-jeddah': '/blog/photos/modern-kitchen-cabinets.jpg',
   'cheap-custom-kitchens-jeddah': '/blog/photos/modern-kitchen-cabinets.jpg',
+  'industrial-kitchen-marble-installation': '/blog/photos/marble-countertop-kitchen.jpg',
+  'kitchen-marble-shop-jeddah': '/blog/photos/marble-countertop-kitchen.jpg',
+  'black-kitchen-marble': '/blog/photos/marble-countertop-kitchen.jpg',
+  'white-granite-kitchen-marble': '/blog/photos/marble-countertop-kitchen.jpg',
+  'natural-kitchen-marble-installation': '/blog/photos/marble-countertop-kitchen.jpg',
+  'kitchen-marble-jeddah': '/blog/photos/marble-countertop-kitchen.jpg',
+  'modern-marble-kitchen-installation': '/blog/photos/marble-countertop-kitchen.jpg',
+  'kitchen-marble-installer-jeddah': '/blog/photos/marble-countertop-kitchen.jpg',
 };
 
 const getCoverImageForSlug = (slug: string) => blogCoverBySlug[slug] ?? '/blog/photos/modern-kitchen-cabinets.jpg';
